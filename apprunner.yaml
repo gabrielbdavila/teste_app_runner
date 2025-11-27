@@ -10,7 +10,7 @@ run:
 
   # Aqui é onde instalamos as dependências DENTRO da imagem de runtime
   pre-run:
-    - pip3 install --no-cache-dir -r requirements.txt
+    - pip3 install -r requirements.txt
 
   # Comando que inicia sua aplicação
   command: python3 app.py
