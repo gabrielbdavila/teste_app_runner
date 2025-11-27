@@ -1,12 +1,16 @@
-version: 1.0
 runtime: python311
+
+build:
+  commands:
+    # Nenhum passo de build necessário por enquanto
+    - echo "Build step - nothing to do"
 
 run:
   runtime-version: 3.11
 
-  # Instala as dependências DENTRO da imagem de runtime (correto!)
+  # Aqui é onde instalamos as dependências DENTRO da imagem de runtime
   pre-run:
     - pip3 install --no-cache-dir -r requirements.txt
 
-  # Comando para iniciar seu aplicativo Dash
+  # Comando que inicia sua aplicação
   command: python3 app.py
